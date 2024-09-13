@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="PIP-Loco, Planning, Legged Robots, Reinforcement Learning, Quadruped Robot">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/stochlab.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <img src="./static/images/final_logo.png" width="20%" alt="Stoch Lab Logo"/>
+        <img src="./static/images/IISc_Logo.jpg" width="10%" alt="IISc Logo" align="right"/>
+        <div class="columns is-centered"></div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">        
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">PIP-Loco: A Proprioceptive Infinite Horizon Planning Framework for Quadrupedal Robot Locomotion</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://aditya-shirwatkar.github.io/">Aditya Shirwatkar</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Naman Saxena</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Kishore Chandra</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.shishirny.com/">Shishir Kolathaya</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"> Indian Institute of Science (IISc), Bangalore </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span> -->
+              
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span> -->
+
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span> -->
+            </div>
+          </div>
+
+          <!-- Under Review Text -->
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"> (Preprint under review) </span>
+          </div>
+          
+          <div class="column has-text-centered">
+            <div class="columns is-centered has-text-centered">
+              <div class="column">
+                <img src="images/results/gravel.gif" width="48%">
+                <img src="images/results/stairs.gif" width="48%">
+            </div>      
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              A core strength of Model Predictive Control (MPC) for quadrupedal locomotion has been its ability to enforce constraints and provide interpretability of the sequence of commands over the horizon. However, despite being able to plan, MPC struggles to scale with task complexity, often failing to achieve robust behavior on rapidly changing surfaces. On the other hand, model-free Reinforcement Learning (RL) methods have outperformed MPC on multiple terrains, showing emergent motions but inherently lack any ability to handle constraints or perform planning. To address these limitations, we propose a framework that integrates proprioceptive planning with RL, allowing for agile and safe locomotion behaviors through the horizon. Inspired by MPC, we incorporate an internal model that includes a velocity estimator and a Dreamer module. During training, the framework learns an expert policy and an internal model that are co-dependent, facilitating exploration for improved locomotion behaviors. During deployment, the Dreamer module solves an infinite-horizon MPC problem, adapting actions and velocity commands to respect the constraints. We validate the robustness of our training framework through ablation studies on internal model components and demonstrate improved robustness to training noise. Finally, we evaluate our approach across multi-terrain scenarios in both simulation and hardware.
+            </p>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">    
+      <div class="columns is-centered has-text-centered">
+          <div class="column">
+            <h2 class="title is-3"> Comparison to Related Work </h2>
+          </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+        <div class="content has-text-justified" style="padding-top: 5%">
+          <p>
+            Here, an adaptation module models environment hidden parameters (like friction, contact forces, etc). 
+            An internal model predicts the robot base velocities, latent states for terrain characteristics/disturbance responses, or future observations up to <i>H</i> steps. 
+            NLM, PLM, and FLM denote the No-Latent, Partially-Latent, and Fully-Latent Dreamer Modules, respectively (see the paper for details).
+          </p>
+        </div>
+        <img src="images/Comparison.png" width="100%">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">    
+      <div class="columns is-centered has-text-centered">
+        <div class="column" style="padding-bottom: 5%">
+          <h2 class="title is-3"> Training Architecture </h2>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <img src="images/Training.png" alt="PIP-Loco Training Architecture" width="80%">
+        <div class="content has-text-justified" style="padding-top: 5%">
+          <p>
+            The internal model (comprising of a velocity estimator and Dreamer module) learns co-dependently with the Asymmetric Actor-Critic. The Dreamer module facilitates temporal reasoning by dreaming about future observations and latent states, enhancing exploration for improved locomotion behaviors.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">    
+      <div class="columns is-centered has-text-centered">
+        <div class="column" style="padding-bottom: 5%">
+          <h2 class="title is-3"> Deployment </h2>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+        <!-- Add some padding between images -->
+        <img src="images/Main.png" alt="PIP-Loco Main" width="50%" style="padding-right: 5%">
+        <img src="images/Deployment.png" alt="PIP-Loco Deployment" width="45%" style="padding-left: 5%">
+        <div class="content has-text-justified" style="padding-top: 5%">
+          <p>
+            The Dreamer module solves an infinite-horizon MPC problem to generate actions for the robot, ensuring robust constraint handling and adaptive locomotion across terrains.
+          </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">    
+      <div class="columns is-centered has-text-centered">
+          <div class="column" style="padding-bottom: 5%">
+            <h2 class="title is-3"> Results </h2>
+          </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <img src="images/results/combined.gif" width="49%" style="padding-right: 2%">
+          <img src="images/results/drop.gif" width="49%" style="padding-left: 2%">
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified" style="padding-top: 5%">
+            <p>
+              Our approach demonstrates robust locomotion behaviors across multiple terrains, including gravel surfaces, slopes, stairs, and steep drops of upto 45cm. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+
+    </code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="https://github.com/StochLab" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
