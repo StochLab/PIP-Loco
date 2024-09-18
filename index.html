@@ -32,7 +32,8 @@
     <div class="hero-body">
       <div class="container is-max-desktop">
         <img src="./static/images/final_logo.png" width="20%" alt="Stoch Lab Logo"/>
-        <img src="./static/images/IISc_Logo.jpg" width="10%" alt="IISc Logo" align="right"/>
+        <!-- <img src="./static/images/IISc_Logo.jpg" width="10%" alt="IISc Logo" align="right"/> -->
+        <img src="./static/images/iisc_logo.png" width="11%" alt="IISc Logo" align="right"/>
         <div class="columns is-centered"></div>
       </div>
     </div>
@@ -75,37 +76,37 @@
                 </a>
               </span> -->
               
-              <!-- <span class="link-block">
-                <a href=""
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2409.09441"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span> -->
+              </span>
 
               <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href=""
+              <span class="link-block">
+                <a href="https://youtu.be/_mPUU_fAuQY"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
                 </a>
-              </span> -->
+              </span>
 
               <!-- Code Link. -->
-              <!-- <span class="link-block">
-                <a href=""
+              <span class="link-block">
+                <a href="https://www.github.com/StochLab/PIP-Loco"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
                 </a>
-              </span> -->
+              </span>
             </div>
           </div>
 
@@ -158,7 +159,7 @@
       </div>
       <div class="columns is-centered">
         <div class="column is-four-fifths">
-        <div class="content has-text-justified" style="padding-top: 5%">
+        <div class="content has-text-justified" style="padding-top: 3%">
           <p>
             Here, an adaptation module models environment hidden parameters (like friction, contact forces, etc). 
             An internal model predicts the robot base velocities, latent states for terrain characteristics/disturbance responses, or future observations up to <i>H</i> steps. 
@@ -175,7 +176,7 @@
   <div class="hero-body">
     <div class="container is-max-desktop">    
       <div class="columns is-centered has-text-centered">
-        <div class="column" style="padding-bottom: 5%">
+        <div class="column" style="padding-bottom: 3%">
           <h2 class="title is-3"> Training Architecture </h2>
         </div>
       </div>
@@ -196,18 +197,20 @@
   <div class="hero-body">
     <div class="container is-max-desktop">    
       <div class="columns is-centered has-text-centered">
-        <div class="column" style="padding-bottom: 5%">
+        <div class="column" style="padding-bottom: 3%">
           <h2 class="title is-3"> Deployment </h2>
         </div>
       </div>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
         <!-- Add some padding between images -->
-        <img src="images/Main.png" alt="PIP-Loco Main" width="50%" style="padding-right: 5%">
-        <img src="images/Deployment.png" alt="PIP-Loco Deployment" width="45%" style="padding-left: 5%">
+        <img src="images/Main.png" alt="PIP-Loco Main" width="40%" style="padding-right: 5%">
+        <img src="images/Deployment.png" alt="PIP-Loco Deployment" width="35%" style="padding-left: 5%">
+        <img src="images/Alg1.png" alt="PIP-Loco Alg1" width="75%" style="padding-top: 5%">
         <div class="content has-text-justified" style="padding-top: 5%">
           <p>
-            The Dreamer module solves an infinite-horizon MPC problem to generate actions for the robot, ensuring robust constraint handling and adaptive locomotion across terrains.
+            The Dreamer module solves an infinite-horizon MPC problem to generate actions for the robot, ensuring robust constraint handling and adaptive locomotion across terrains. 
+            See the paper for more details on the algorithm.
           </p>
         </div>
         </div>
@@ -220,20 +223,14 @@
   <div class="hero-body">
     <div class="container is-max-desktop">    
       <div class="columns is-centered has-text-centered">
-          <div class="column" style="padding-bottom: 5%">
+          <div class="column" style="padding-bottom: 3%">
             <h2 class="title is-3"> Results </h2>
           </div>
-      </div>
-      <div class="columns is-centered">
-        <div class="column">
-          <img src="images/results/combined.gif" width="49%" style="padding-right: 2%">
-          <img src="images/results/drop.gif" width="49%" style="padding-left: 2%">
-        </div>
       </div>
 
       <div class="columns is-centered">
         <div class="column is-four-fifths">
-          <div class="content has-text-justified" style="padding-top: 5%">
+          <div class="content has-text-justified">
             <p>
               Our approach demonstrates robust locomotion behaviors across multiple terrains, including gravel surfaces, slopes, stairs, and steep drops of upto 45cm. 
             </p>
@@ -241,19 +238,58 @@
         </div>
       </div>
 
+      <div class="columns is-centered has-text-centered">
+        <div class="column" style="padding-top: 5%">
+          <h2 class="title is-5"> PIP-Loco with NLM </h2>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <img src="images/results/combined.gif" width="39%" style="padding-right: 2%">
+        <img src="images/results/drop.gif" width="39%" style="padding-left: 2%">
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column" style="padding-top: 5%">
+          <h2 class="title is-5"> PIP-Loco with PLM & FLM </h2>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <img src="images/results/plm.gif" width="39%">
+      </div>
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column" style="padding-top: 5%">
+          <h2 class="title is-5"> Importance of Planning </h2>
+        </div>
+      </div>
+
+      <div class="columns is-centered">
+        <img src="images/results/comparison.gif" width="49%" style="padding-right: 2%">
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- 
+
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
+    <h2 class="title is-5">Cite</h2>
     <pre><code>
-
+      @misc{shirwatkar2024piplocoproprioceptiveinfinitehorizon,
+        title={PIP-Loco: A Proprioceptive Infinite Horizon Planning Framework for Quadrupedal Robot Locomotion}, 
+        author={Aditya Shirwatkar, Naman Saxena, Kishore Chandra and Shishir Kolathaya},
+        year={2024},
+        eprint={2409.09441},
+        archivePrefix={arXiv},
+        primaryClass={cs.RO},
+        url={https://arxiv.org/abs/2409.09441}, 
+      }
     </code></pre>
   </div>
-</section> -->
+</section>
 
 
 <footer class="footer">
