@@ -1,3 +1,3 @@
-# PIP-Loco: A Proprioceptive Infinite Horizon Planning Framework for Quadrupedal Robot Locomotion
+### PIP-Loco: A Proprioceptive Infinite-Horizon Planning Framework for Quadrupedal Robot Locomotion
 
-Code will be released soon. Stay tuned!
+We’re planning to merge the code with our extended work. Stay tuned!
